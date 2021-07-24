@@ -1,0 +1,336 @@
+:root{
+    /* pseude el manipulate */
+    --pseudo-content: "";
+    --pseudeo-display: block;
+    --pseudo-width: 100%;
+    --pseudo-height: 100%;
+    --pseudo-background-color: rgba(0, 0, 0, 0.6);
+    --pseudo-position: absolute;
+    --pseudo-bottom: 0;
+    --pseudo-top: 100;
+}
+/* 
+body:after{
+    content: var(--pseudo-content);
+    display:var(--pseudeo-display) ;
+    width: var(--pseudo-width);
+    height: var(--pseudo-height);
+    background-color: var(--pseudo-background-color);
+    position: var(--pseudo-position);
+    bottom: var(--pseudo-bottom);
+    top: var(--pseudo-top);
+} */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+ .overlay{
+    content: var(--pseudo-content);
+    display: var;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 100;
+} 
+
+
+
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+.input_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.search_section> #searchBook{
+    display: flex;
+    flex-direction: column;
+    color: cornflowerblue;
+
+}
+
+.search_section > h2 {
+    color: cornflowerblue;
+}
+
+.search_section > form, #searchBook {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label, .search_section > #searchBook > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > #searchBook > input {
+    background-image: url(src/img/search.png);
+    background-repeat: no-repeat;
+    background-position: 1%;
+    background-size: 25px;
+    opacity: 1;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 10px 40px ;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf > h2 {
+    color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-color: darkred;
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .grey{
+    background-color: #94989c;
+    color: white;
+} 
+
+
+
+.confirmation > .confirm{
+    position: fixed;
+    text-align: center;
+    padding: 30px;
+    top: 20vh;
+    left: 40vw;
+    border-radius: 7px;
+    background-color: rgb(186, 213, 228);
+    z-index: 999;
+    
+}
+
+
+.confirmation > .confirm img{
+    width: 100px;
+}
+
+ .close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus{
+    color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.confirmation > .confirm > .btn-popup{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.confirmation > .confirm > .btn-popup > button{
+    list-style: none;
+    padding: 10px;
+    width: 50%;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+}
+.confirmation > .confirm > .btn-popup > button:hover{
+    cursor: pointer;
+}
+.confirmation > .confirm > .btn-popup > button:active{
+    outline: none;
+}
+.confirmation > .confirm > .btn-popup > li > a{
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.confirmation > .confirm > .btn-popup > .confirmYesBtn{
+    background-color: #fc7169;
+}
+.confirmation > .confirm > .btn-popup > .confirmNoBtn{
+    background-color: #b6bece;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.remove-book{
+    animation: removeBook 0.6s;
+}
+
+.show-book{
+    animation: addBook 0.3s;
+}
+
+
+@keyframes addBook{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes removeBook{
+    0%{
+        opacity: 1;
+        transform: translatex(-100px);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 920px){
+    .confirmation > .confirm{
+        left: 30vw;
+    }
+}
